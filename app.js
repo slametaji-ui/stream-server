@@ -8,6 +8,11 @@ const PORT = process.env.PORT || 3000;
 // Gunakan middleware cors
 app.use(cors());
 
+
+app.get('/', (req, res) => {
+    res.send('Hello from Express on Vercel! Server is running');
+});
+
 app.get('/stream', (req, res) => {
     const streamUrl = 'http://utradio.ut.ac.id:8000/liv.ogg';
 
